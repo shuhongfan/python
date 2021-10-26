@@ -191,3 +191,216 @@ for i in range(1,51):
     if i%5!=0:
         continue
     print(i)
+
+a=range(1,4)
+print(list(a))
+
+
+for i in range(1,4):
+    for i in range(1,5):
+        print('*',end='\t')
+    print()
+
+for i in range(1,10):
+    for j in range(1,i+1):
+        print("*",end=' ')
+    print("\n")
+
+for i in range(1,10):
+    for j in range(1,i+1):
+        print(i,'*',j,'= ',(i*j),end='  ')
+    print()
+
+for i in range(5):
+    for j in range(1,11):
+        if j%2==0:
+            continue
+        print(j,end='\t')
+    print()
+
+a=10
+lst=['hello','world',98]
+print(id(lst))
+print(type(lst))
+print(lst)
+
+lst2 = list(['hello', 'world', 98])
+print(lst2)
+print(lst2[2])
+print(lst2[-2])
+lst2.append({'fs',"dsf"})
+lst2.append('world')
+print(lst2)
+
+print(lst2.index('world'))
+# print(lst2.index('hello',1,4))
+print(lst2[-2])
+
+lst3=lst2[1:6]
+print(lst3)
+
+print(lst2[::-1])
+print(lst2[3::-1])
+
+print(98 in lst2)
+
+for i in lst2:
+    print(i)
+
+lst2.append(lst3)
+print(lst2)
+
+lst2.extend(lst3)
+print(lst2)
+
+
+lst2.remove(98)
+print(lst2)
+
+lst2.pop(-2)
+print(lst2)
+
+# 不指定参数 删除最后一个
+lst2.pop()
+print(lst2)
+
+newList=lst2[1:6]
+print("原列表：",lst2)
+print("切片后列表：",newList)
+
+lst2[1:3]=[]
+print(lst2)
+
+lst=[10,20,30,40]
+lst[2]=100
+print(lst)
+
+lst[1:3]=[300,400,500,600]
+print(lst)
+
+lst=[20,40,10,98,54]
+lst.sort()
+print(lst)
+lst.sort(reverse=True)
+print(lst)
+
+lst=[10,20,30,40]
+newList=sorted(lst,reverse=True)
+print(newList)
+print(lst)
+
+lst=[i*i for i in range(1,10)]
+print(lst)
+
+lst=[i*2 for i in range(1,11)]
+print(lst)
+
+scores={'张三':100,'李四':98,'王五':45}
+print(scores)
+print(type(scores))
+
+student=dict(name='jack',age=20)
+print(student)
+
+d={}
+print(d)
+
+print(scores['张三'])
+print(scores.get('张三'))
+print(scores.get('sd',88))
+print('张三' in scores)
+
+del scores['张三']
+scores.clear()
+scores['陈留']=100
+print(scores)
+
+keys=scores.keys()
+print(keys)
+print(list(keys))
+
+values=scores.values()
+print(values)
+print(list(values))
+
+items=scores.items()
+print(items)
+print(list(items))
+
+for i in scores:
+    print(i,scores[i],scores.get(i),scores[i])
+
+d={'name':'张三','name':'李四'}
+print(d)
+
+items=['Fruits','Books','Others']
+prices=[96,78,85]
+d={i:p for i,p in zip(items,prices)}
+print(d)
+
+s='hello'
+print(id(s))
+s+='world'
+print(id(s))
+
+t='Ptyhon','world',98
+print(t)
+print(type(t))
+
+t1=tuple(('python','world',98))
+print(t1)
+
+# 空列表
+lst=[]
+# 空字典
+d={}
+# 空元组
+t=()
+
+t=(10,[20,30],9)
+print(t)
+print(t[0],type(t[0]),id(t[0]))
+print(t[1],type(t[1]),id(t[1]))
+print(t[2],type(t[2]),id(t[2]))
+
+for i in t:
+    print(i)
+
+s={2,3,4,5,5,6,7,7}
+print(s)
+
+s1=set(range(6))
+print(s1)
+
+s2=set([1,2,3,4,5,6,6])
+print(s2)
+
+s3=set((1,2,3,4,4,5,65,5))
+print(s3,type(s3))
+
+
+s={10,20,30,405,60}
+print(10 in s)
+print(100 in s)
+s.add(50)
+print(s)
+s.update({200,400,300})
+print(s)
+
+# s.remove(100)
+# s.remove(50)
+
+s={10,20,30,40}
+s2={30,40,20,10}
+print(s==s2)
+print(s!=s2)
+print(s2.issubset(s1))
+print(s3.issubset(s1))
+
+lst=[i*i for i in range(6)]
+print(lst)
+
+s={i*i for i in range(6)}
+print(s)
+
+print([2**i for i in range(64)])
