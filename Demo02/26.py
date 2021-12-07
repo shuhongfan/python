@@ -69,7 +69,7 @@ def getResult(oldfile, newfile):
 
 
 if __name__ == '__main__':
-    oldfile = r'D:\Develop\\demo.xlsx'
+    oldfile = r'D:\Develop\\ys.xlsx'
     newfile = r'D:\Develop\\result.xlsx'
 
     generateRandomInfomation(oldfile)

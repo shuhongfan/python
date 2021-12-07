@@ -11,7 +11,7 @@ from docx.shared import RGBColor
 boldText = []
 redText = []
 #打开Word文件，遍历所有段落
-doc = Document('D:\\Develop\\demo.docx')
+doc = Document('D:\\Develop\\ys.docx')
 for p in doc.paragraphs:
     for r in p.runs:
         #加粗字体
